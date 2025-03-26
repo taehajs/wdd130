@@ -26,18 +26,15 @@ header {
     text-align: center;
 }
 
-
 header h1 {
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     font-size: 2em;
 }
 
-
 .logo {
     width: 100px;
 }
-
 
 nav ul {
     display: flex;
@@ -63,7 +60,6 @@ nav ul li a:hover {
     text-align: center;
     padding: 40px;
 }
-
 
 h1, h2 {
     font-family: var(--heading-font);
@@ -107,6 +103,7 @@ figcaption {
     border-radius: 5px;
 }
 
+
 footer {
     background-color: var(--secondary-color);
     color: white;
@@ -124,7 +121,6 @@ footer {
 .sociallinks a img {
     width: 40px;
 }
-
 
 @media (max-width: 768px) {
     header {
