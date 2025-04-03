@@ -3,86 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact White Water Rafting - Get in Touch</title>
     <meta name="description" content="Get in touch with us for reservations, inquiries, or any questions about our rafting adventures.">
     <meta name="author" content="Rafting Company Team">
-
-   
+    <title>Contact White Water Rafting - Get in Touch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
-    <header>
-        <h1>White Water Rafting</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
+<header>
+    <img src="images/logo.png" alt="Rafting Company Logo" class="logo">
+    <h1>White Water Rafting</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contact">
         <h2>Contact Us</h2>
+        <p>Have any questions? Fill out the form below or visit us at our office.</p>
 
-        <section class="company-info">
-            <h3>Our Location</h3>
-            <p>123 River Road, Adventure Town, USA</p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: contact@whitewaterrafting.com</p>
+        <form action="contact.php" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
 
-            <!-- Google Map -->
-            <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_URL_HERE" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
 
-        <section class="team">
-            <h3>Meet Our Team</h3>
-            <div class="employee">
-                <img src="images/employee1.jpg" alt="John Doe - CEO">
-                <p>John Doe - CEO</p>
-            </div>
-            <div class="employee">
-                <img src="images/employee2.jpg" alt="Jane Smith - Guide">
-                <p>Jane Smith - Guide</p>
-            </div>
-            <div class="employee">
-                <img src="images/employee3.jpg" alt="Mike Johnson - Customer Support">
-                <p>Mike Johnson - Customer Support</p>
-            </div>
-        </section>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
 
-        <section class="contact-form">
-            <h3>Send Us a Message</h3>
-            <form action="#" method="post">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
+            <fieldset>
+                <legend>Preferred Contact Method:</legend>
+                <label for="contact-email">
+                    <input type="radio" id="contact-email" name="contact-method" value="email"> Email
+                </label>
+                <label for="contact-phone">
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone"> Phone
+                </label>
+                <label for="contact-none">
+                    <input type="radio" id="contact-none" name="contact-method" value="none"> No Preference
+                </label>
+            </fieldset>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"> Subscribe to Newsletter
+            </label>
 
-                <fieldset>
-                    <legend>Reason for Contact:</legend>
-                    <label><input type="radio" name="reason" value="general" required> General Inquiry</label>
-                    <label><input type="radio" name="reason" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="reason" value="website"> Website Suggestion</label>
-                </fieldset>
+            <button type="submit">Send Message</button>
+        </form>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+        <h3>Visit Us</h3>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345098173!2d144.95373531590456!3d-37.8162797420216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1c7d5d7%3A0x1bb43d5e14e3190!2sWhite%20Water%20Rafting!5e0!3m2!1sen!2sus!4v1632748565731!5m2!1sen!2sus" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
 
-                <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label>
+    <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <figure>
+                <img src="images/rafting1.jpg" alt="Rafting adventure on a river">
+                <figcaption>Exciting rafting experience</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rafting2.jpg" alt="Group of people rafting">
+                <figcaption>Teamwork makes rafting fun!</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rafting3.jpg" alt="Raft in action">
+                <figcaption>Rapid waves challenge</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rafting4.jpg" alt="Beautiful river scenery">
+                <figcaption>Scenic view while rafting</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rafting5.jpg" alt="Rafting team paddling together">
+                <figcaption>Paddling through the river</figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+<footer>
+    <p>&copy; 2025 White Water Rafting | All Rights Reserved</p>
+    <div class="sociallinks">
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 White Water Rafting. All rights reserved.</p>
-        <p><a href="wireframe_contact.png">View Wireframe</a></p>
-    </footer>
 </body>
 </html>
