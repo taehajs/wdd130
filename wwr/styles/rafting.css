@@ -15,93 +15,82 @@ body {
     color: #2D3748;
 }
 
-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-header img {
-    height: 50px;
-    margin-right: 20px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    font-family: var(--heading-font);
-}
-
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-nav ul li a:hover {
-    color: var(--accent1-color);
-}
-
-.adventures {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 40px;
-}
-
-.adventures figure {
-    flex: 1 1 calc(20% - 20px);
-    margin: 10px;
+.contact-container h2 {
     text-align: center;
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
-.adventures img {
-    width: 100%;
+form {
+    background-color: white;
+    padding: 20px;
     border-radius: 8px;
-}
-
-.adventures figcaption {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-footer {
-    background-color: var(--secondary-color);
-    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    margin-top: 20px;
-}
-
-footer .social-icons {
-    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
+label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--accent1-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent2-color);
+}
+
 footer .social-icons img {
-    width: 30px;
-    height: auto;
+    width: 25px;
+    height: 25px;
     transition: transform 0.2s ease;
 }
 
 footer .social-icons img:hover {
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+    .contact-container {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    button {
+        font-size: 14px;
+    }
 }
