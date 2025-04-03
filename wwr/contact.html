@@ -24,9 +24,9 @@
         <section class="contact-info">
             <h2>Contact Us</h2>
             <p>Address: 50 North Temple, Salt Lake City, UT 84150 USA</p>
-            <p>Phone: (+1)8012408945</p>
+            <p>Phone: (+1) 801-240-8945</p>
             <p>Email: info@whitewaterrafting.com</p>
-            <iframe src="https://www.google.com/maps/embed?..." width="600" height="450" allowfullscreen=""></iframe>
+            <iframe title="Location Map" src="https://www.google.com/maps/embed?..." width="600" height="450" allowfullscreen=""></iframe>
         </section>
         
         <section class="team">
@@ -49,7 +49,7 @@
         
         <section class="contact-form">
             <h2>Send Us a Message</h2>
-            <form action="#" method="post">
+            <form action="submit_form.php" method="post">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -58,16 +58,19 @@
                 
                 <fieldset>
                     <legend>Purpose of Inquiry:</legend>
-                    <label for="general"><input type="radio" id="general" name="purpose" value="general" required> General Inquiry</label>
-                    <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
-                    <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
+                    <div class="radio-group">
+                        <label for="general"><input type="radio" id="general" name="purpose" value="general" required> General Inquiry</label>
+                        <label for="reservation"><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
+                        <label for="suggestion"><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
+                    </div>
                 </fieldset>
-                
                 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 
-                <label><input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="subscribe"> Please subscribe me to the monthly newsletter
+                </label>
                 
                 <button type="submit">Send Message</button>
             </form>
