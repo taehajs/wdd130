@@ -95,9 +95,11 @@ figcaption {
 
 .gallery img {
     width: 100%;
+    max-width: 150px; 
     height: auto;
     border-radius: 5px;
 }
+
 
 iframe {
     width: 100%;
