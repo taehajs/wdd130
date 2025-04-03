@@ -25,14 +25,19 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    font-family: var(--heading-font);
     font-size: 2em;
+    color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 100px;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -49,67 +54,131 @@ nav ul li a:hover {
     color: var(--accent1-color);
 }
 
-.contact-info, .team, .contact-form {
+.about-section, .history, .adventure {
     text-align: center;
     padding: 40px;
 }
 
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
-.team-members figure {
-    max-width: 200px;
+figure {
+    text-align: center;
+    margin: 20px 0;
 }
 
-.team-members img {
-    width: 100%;
+figure img {
+    width: 80%;
+    max-width: 600px;
     border-radius: 8px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
+figcaption {
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.gallery figure {
+    text-align: center;
+    max-width: 200px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+.contact-form textarea {
+    height: 100px;
 }
 
-button {
-    background-color: var(--accent1-color);
-    color: white;
+fieldset {
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
+    margin: 15px 0;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--accent2-color);
+.contact-form button:hover {
+    background-color: var(--secondary-color);
 }
 
 footer {
     background-color: var(--secondary-color);
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 15px;
     margin-top: 20px;
+}
+
+.sociallinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.sociallinks a img {
+    width: 40px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
 }
