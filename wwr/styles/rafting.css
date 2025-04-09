@@ -294,3 +294,80 @@ footer {
         font-size: 14px;
     }
 }
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.newsletter {
+    background-color: #EDF2F7;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.cta {
+    background-color: var(--accent2-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+}
