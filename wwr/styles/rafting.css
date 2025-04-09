@@ -13,6 +13,7 @@ body {
     padding: 0;
     background-color: #F7FAFC;
     color: #2D3748;
+    line-height: 1.6;
 }
 
 header {
@@ -50,18 +51,27 @@ nav ul li a {
     font-size: 18px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     color: var(--accent1-color);
 }
 
 .about-section, .history, .adventure {
     text-align: center;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--accent2-color);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 figure {
@@ -100,7 +110,6 @@ figcaption {
     border-radius: 5px;
 }
 
-
 iframe {
     width: 100%;
     height: 400px;
@@ -127,6 +136,14 @@ iframe {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: var(--text-font);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--accent1-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(237, 137, 54, 0.5);
 }
 
 .contact-form textarea {
@@ -138,6 +155,15 @@ fieldset {
     margin: 15px 0;
 }
 
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+}
+
+.checkbox-label {
+    margin-top: 10px;
+}
+
 .contact-form button {
     margin-top: 15px;
     background-color: var(--primary-color);
@@ -145,11 +171,15 @@ fieldset {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.contact-form button:focus {
     background-color: var(--secondary-color);
+    outline: none;
 }
 
 footer {
@@ -168,6 +198,11 @@ footer {
 
 .sociallinks a img {
     width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.sociallinks a img:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
