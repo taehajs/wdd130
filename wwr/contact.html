@@ -1,104 +1,103 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with us for reservations, inquiries, or any questions about our rafting adventures.">
-    <meta name="author" content="Rafting Company Team">
-    <title>Contact White Water Rafting - Get in Touch</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact White Water Rafting for reservations, general questions, or feedback.">
+  <meta name="author" content="White Water Rafting Team">
+  <title>Contact Us - White Water Rafting</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/rafting.css">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
 
-<header>
+  <header>
     <img src="images/Rafting_company_logo.jpg" alt="White Water Rafting company logo" class="logo">
     <h1>White Water Rafting</h1>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<main>
+  <main>
+    <!-- Contact Info Section -->
     <section class="contact-info">
-        <h2>Contact Us</h2>
-        <p><strong>Address:</strong> 50 North Temple, Salt Lake City, UT 84150 USA</p>
-        <p><strong>Phone:</strong> (+1) 801-240-8945</p>
-        <p><strong>Email:</strong> info@whitewaterrafting.com</p>
-        <iframe title="Rafting Company Location on Map" aria-label="Company location on Google Maps"
-                src="https://www.google.com/maps/embed?..." 
-                width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 50 North Temple, Salt Lake City, UT 84150 USA</p>
+      <p><strong>Phone:</strong> (+1) 801-240-8945</p>
+      <p><strong>Email:</strong> info@whitewaterrafting.com</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!..." 
+          width="600" height="450" loading="lazy"
+          title="Company Location on Map" aria-label="Rafting company map location">
+        </iframe>
+      </div>
     </section>
 
+    <!-- Team Section -->
     <section class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-members">
-            <figure>
-                <img src="images/john_doe.jpg" alt="Portrait of John Doe, Senior Rafting Guide">
-                <figcaption>John Doe – Senior Rafting Guide</figcaption>
-            </figure>
-            <figure>
-                <img src="images/jane_smith.jpg" alt="Portrait of Jane Smith, Customer Support Specialist">
-                <figcaption>Jane Smith – Customer Support</figcaption>
-            </figure>
-            <figure>
-                <img src="images/Mike.jpg" alt="Portrait of Mike Johnson, Safety Manager">
-                <figcaption>Mike Johnson – Safety Manager</figcaption>
-            </figure>
-        </div>
+      <h2>Meet Our Team</h2>
+      <div class="team-members">
+        <figure>
+          <img src="images/john_doe.jpg" alt="Portrait of John Doe, Senior Rafting Guide">
+          <figcaption>John Doe – Senior Rafting Guide</figcaption>
+        </figure>
+        <figure>
+          <img src="images/jane_smith.jpg" alt="Portrait of Jane Smith, Customer Support Specialist">
+          <figcaption>Jane Smith – Customer Support</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Mike.jpg" alt="Portrait of Mike Johnson, Safety Manager">
+          <figcaption>Mike Johnson – Safety Manager</figcaption>
+        </figure>
+      </div>
     </section>
 
+    <!-- Contact Form Section -->
     <section class="contact-form">
-        <h2>Send Us a Message</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+      <h2>Send Us a Message</h2>
+      <form action="submit_form.php" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-            <fieldset>
-                <legend>Purpose of Inquiry:</legend>
-                <label>
-                    <input type="radio" id="general" name="purpose" value="general" required>
-                    General Inquiry
-                </label><br>
-                <label>
-                    <input type="radio" id="reservation" name="purpose" value="reservation">
-                    Reservation Question
-                </label><br>
-                <label>
-                    <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                    Website Suggestion
-                </label>
-            </fieldset>
+        <fieldset>
+          <legend>Purpose of Inquiry:</legend>
+          <label><input type="radio" name="purpose" value="general" required> General Inquiry</label><br>
+          <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label><br>
+          <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+        </fieldset>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-            <label class="checkbox-label">
-                <input type="checkbox" name="subscribe">
-                Please subscribe me to the monthly newsletter
-            </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="subscribe">
+          Please subscribe me to the monthly newsletter
+        </label>
 
-            <button type="submit" aria-label="Send your message to White Water Rafting">Send Message</button>
-        </form>
+        <button type="submit" aria-label="Send your message to White Water Rafting">Send Message</button>
+      </form>
     </section>
-</main>
+  </main>
 
-<footer>
+  <footer>
     <p>&copy; 2025 White Water Rafting. All rights reserved.</p>
     <a href="wireframes/contact-wireframe.png">View Wireframe</a>
-</footer>
+  </footer>
 
 </body>
 </html>
