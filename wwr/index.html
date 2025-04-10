@@ -10,72 +10,64 @@
 </head>
 <body>
   <header>
-    <img class="logo" src="images/Rafting_company_logo.jpg" alt="White Water Rafting company logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="trips.html">Trips</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <img class="logo" src="images/Rafting_company_logo.jpg" alt="White Water Rafting company logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="trips.html">Trips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
-      <h1 class="hero-text">Ride the Rapids With Us!</h1>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Rafting Adventure" class="hero-img">
+    <div class="hero-text-box">
+      <h1>Ride the Rapids With Us!</h1>
+      <p>Unleash your adventurous spirit on a journey you'll never forget.</p>
+      <a href="trips.html" class="hero-button">Explore Trips</a>
+    </div>
+  </section>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-      <h2>Welcome to White Water Rafting</h2>
-      <p>Join us for unforgettable adventures on the river. Whether you're new to rafting or a seasoned explorer, we have the perfect trip for you.</p>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission">
-      <h2>Our Purpose</h2>
-      <p>We’re here to connect people with nature through thrilling and safe rafting experiences guided by professionals.</p>
-      <img src="images/adventure1.jpg" alt="Rafting Purpose">
-    </section>
-
-    <!-- Offer Section -->
-    <section class="offer">
-      <h2>What We Offer</h2>
-      <p>Choose from beginner-friendly floats to adrenaline-pumping rapids. Adventure is calling!</p>
-      <img src="images/adventure2.jpg" alt="Rafting Options">
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-      <h2>Your Next Adventure Awaits</h2>
-      <p>Don’t miss out on our unforgettable rafting experiences. Click below to explore all our trips!</p>
-      <a href="trips.html" class="cta-button">Explore Trips</a>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-      <h2>Subscribe to Our Newsletter</h2>
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>Stay in the Loop</h2>
+      <p>Get the latest updates and special offers.</p>
       <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
         <button type="submit">Subscribe</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="images/adventure1.jpg" alt="Our Mission">
+      <h3>Our Mission</h3>
+      <p>Connecting people to nature through unforgettable rafting experiences.</p>
+    </div>
+    <div class="feature-box">
+      <img src="images/adventure2.jpg" alt="What We Offer">
+      <h3>Tailored Trips</h3>
+      <p>From beginner floats to extreme whitewater, we’ve got something for everyone.</p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 White Water Rafting | Created by Jiseung Kim</p>
-    <div class="sociallinks">
-      <a href="#"><img src="images/1_Facebook_colored_svg_copy-1024.webp" alt="Facebook"></a>
-      <a href="#"><img src="images/instagram_icon-instagram_buttoninstegram-1024.webp" alt="Instagram"></a>
-      <a href="#"><img src="images/2018_social_media_popular_app_logo_twitter-1024.webp" alt="Twitter"></a>
+    <div class="footer-content">
+      <p>&copy; 2025 White Water Rafting | Created by Jiseung Kim</p>
+      <div class="social-links">
+        <a href="#"><img src="images/1_Facebook_colored_svg_copy-1024.webp" alt="Facebook"></a>
+        <a href="#"><img src="images/instagram_icon-instagram_buttoninstegram-1024.webp" alt="Instagram"></a>
+        <a href="#"><img src="images/2018_social_media_popular_app_logo_twitter-1024.webp" alt="Twitter"></a>
+      </div>
     </div>
   </footer>
 </body>
