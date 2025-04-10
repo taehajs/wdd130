@@ -76,11 +76,14 @@ nav ul li a:focus {
 .hero {
     position: relative;
     width: 100%;
+    height: 60vh;
+    overflow: hidden;
 }
 
 .hero-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -92,142 +95,21 @@ nav ul li a:focus {
     font-size: 2.5rem;
     color: white;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.4);
     padding: 20px;
     border-radius: 10px;
-}
-
-/* Sections */
-.about-section, .history, .adventure {
+    max-width: 90%;
     text-align: center;
-    padding: 40px 20px;
-}
-
-/* Gallery */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.gallery figure {
-    text-align: center;
-    max-width: 160px;
-}
-
-.gallery img {
-    width: 100%;
-    max-width: 150px; 
-    height: auto;
-    border-radius: 5px;
-}
-
-figure {
-    text-align: center;
-    margin: 20px 0;
-}
-
-figure img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 8px;
-}
-
-figcaption {
-    font-style: italic;
-    color: var(--secondary-color);
-    margin-top: 5px;
-}
-
-/* Trip Page */
-.trip-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 40px 20px;
-    background-color: #fff;
-}
-
-.trip-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    background-color: #ffffff;
-    transition: transform 0.3s;
-}
-
-.trip-card:hover {
-    transform: scale(1.02);
-}
-
-.trip-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.trip-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 40px auto;
-}
-
-.trip-table th, .trip-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-.trip-table th {
-    background-color: var(--accent1-color);
-    color: white;
-}
-
-/* NEW: Trip Descriptions Section */
-.trip-descriptions {
-    padding: 40px 20px;
-    background-color: #ffffff;
-}
-
-.trip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.trip-grid article {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.trip-grid article:hover {
-    transform: scale(1.02);
-}
-
-.trip-grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
 }
 
 /* Call to Action Button */
 .cta-button {
     display: inline-block;
-    margin: 20px 0;
-    padding: 12px 20px;
-    background-color: var(--primary-color);
+    margin: 30px auto;
+    padding: 15px 25px;
+    background-color: var(--accent1-color);
     color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
     border: none;
     border-radius: 8px;
@@ -237,82 +119,19 @@ figcaption {
 
 .cta-button:hover,
 .cta-button:focus {
-    background-color: var(--secondary-color);
-    outline: none;
-}
-
-/* Contact Form */
-.contact-form {
-    margin-top: 20px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: var(--text-font);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--accent1-color);
-    outline: none;
-    box-shadow: 0 0 5px rgba(237, 137, 54, 0.5);
-}
-
-.contact-form textarea {
-    height: 100px;
-}
-
-fieldset {
-    border: none;
-    margin: 15px 0;
-}
-
-.radio-group label {
-    display: block;
-    margin: 5px 0;
-}
-
-.checkbox-label {
-    margin-top: 10px;
-}
-
-.contact-form button {
-    margin-top: 15px;
     background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover,
-.contact-form button:focus {
-    background-color: var(--secondary-color);
     outline: none;
 }
 
 /* Newsletter */
 .newsletter {
     background-color: #EDF2F7;
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
 }
 
 .newsletter form {
@@ -322,24 +141,53 @@ fieldset {
     margin: auto;
 }
 
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.newsletter button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: var(--accent1-color);
+}
+
 /* Grid Info Section */
 .grid-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #fff;
 }
 
 .grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
 }
 
 .grid-item img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    max-height: 250px;
+    height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* Footer */
@@ -366,7 +214,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -377,15 +225,16 @@ footer {
         flex-direction: column;
     }
 
-    .gallery {
-        flex-direction: column;
+    .hero-text {
+        font-size: 1.8rem;
+        padding: 15px;
     }
 
-    .trip-section {
+    .grid-info {
         grid-template-columns: 1fr;
     }
 
-    .trip-table {
-        font-size: 14px;
+    .cta-button {
+        width: 90%;
     }
 }
